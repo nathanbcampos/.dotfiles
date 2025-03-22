@@ -115,8 +115,9 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+# if test -t 1; then
+# exec zsh
+# fi
 
-export PATH="$PATH:/opt/nvim/"
-if test -t 1; then
-exec zsh
-fi
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
